@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Roboto+Slab:wght@600&family=Roboto:wght@300&display=swap");
+:root {
+  --primary-color: #0089b7;
+  --secondary-color: #003d62;
+  --dark-color: #003251;
+  --darker-color: #003d62;
+  --hover-color: #fd004e;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px; /* i can also write 62.5% here*/
+  line-height: 1.5;
+  font-family: "Raleway", sans-serif;
+}
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+header {
+  background-color: var(--primary-color);
+}
+nav {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo {
+  min-height: 80px;
+  width: 175px;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+  gap: 15px;
+}
+.nav-left ul li a {
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+.nav-left ul li a:hover {
+  padding: 4px 0px;
+  color: #212121;
+  transition: all 0.3s ease-in-out;
+  border-bottom: 2px solid var(--hover-color);
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.8rem;
+}
+.project-section {
+  background-color: var(--secondary-color);
+  min-height: 1100px;
+}
+.hero-sec {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.container-left {
+  font-family: "Roboto Slab", serif;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 700;
+}
+.container-left h1 {
+  font-size: 3rem;
+}
+.hi-text {
+  font-size: 7rem;
+  color: var(--hover-color);
+}
+.name-text {
+  font-size: 5.5rem;
+}

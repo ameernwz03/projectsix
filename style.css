@@ -10,6 +10,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 html {
   font-size: 10px; /* i can also write 62.5% here*/
@@ -125,68 +126,74 @@ a {
 
 .grid-item img {
   height: 400px;
-  max-width: 385px;
+  /* max-width: 385px; */
+  aspect-ratio: 3/2;
+  object-fit: cover;
+
+  /* clip-path: circle(40%); */
   display: grid;
   place-items: center;
 }
-.portfolio-section{
+.portfolio-section {
   background-color: var(--dark-color);
   padding: 3rem 0;
 }
-.grid-content{
+.grid-content {
   font-size: 2rem;
-  text-align: center  ;
+  text-align: center;
 }
-.card{
+.card {
   width: 340px;
   display: flex;
   flex-direction: column;
   border-radius: 0.5rem;
   overflow: hidden;
   transition: all 0.4s ease-in-out;
-
 }
-.grid-item{
+.grid-item {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
- .card:hover {
+.card:hover {
   transform: scale(1.05);
   transition: all 0.7s ease-in-out;
   cursor: pointer;
 }
-.card img:hover{
+.card img:hover {
   transform: scale(1.02);
   transition: all 0.5s ease-in-out;
   opacity: 0.8;
 }
-.grid-content{
+.grid-content {
   background-color: #fff;
- 
+
   padding: 2rem;
- 
+
   position: relative;
   top: -7.5rem;
   margin-bottom: -7.5rem;
   transform: translateY(100px);
   transition: all 0.7s ease-in;
-
+}
+.grid-content a {
+  color: #000;
+  text-decoration: none;
+  font-size: 3rem;
 }
 .card:hover .grid-content {
   transform: translateY(0px);
   background-color: #fff;
   color: #000;
   transition: all 0.4s ease-out;
-
 }
-.contact{
+.contact {
   background-color: var(--darker-color);
   min-height: 85dvh;
   display: grid;
   place-items: center;
 }
-.top-contact{
+.top-contact {
   max-width: 750px;
   margin: 0 auto;
   padding: 2rem 0;
@@ -196,26 +203,26 @@ a {
   justify-content: space-evenly;
   gap: 2rem;
 }
-.contact-item{
+.contact-item {
   gap: 2rem;
   display: flex;
   align-items: center;
 }
-.contact-item i{
+.contact-item i {
   font-size: 4rem;
   cursor: pointer;
   color: #fff;
 }
-.contact-item i:hover{
+.contact-item i:hover {
   color: var(--hover-color);
   transition: all 0.5s ease-out;
   transform: scale(1.2);
 }
-.contact-item h1{
+.contact-item h1 {
   font-size: 4rem;
   color: #fff;
 }
-.bottom-contact{
+.bottom-contact {
   max-width: 550px;
   margin: 0 auto;
   /* background-color: red; */
@@ -225,18 +232,74 @@ a {
   gap: 2rem;
   padding: 2rem 0;
 }
-footer{
+footer {
   background-color: var(--primary-color);
   color: #fff;
   padding: 1rem 0;
 }
-.foot{
+.foot {
   text-align: center;
   /* background: #000; */
 }
-.ameer{
+.ameer {
   color: var(--hover-color);
   letter-spacing: 1.2px;
   padding-left: 5px;
   /* font-weight: bolder; */
+}
+.fa-arrow-up {
+  padding: 1.8rem 1.8rem;
+  background: var(--hover-color);
+  border-radius: 100%;
+  font-size: 1.7rem;
+}
+.arrow-up {
+  position: fixed;
+  bottom: 7%;
+  right: 0.6%;
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 7px;
+    line-height: 1.2;
+  }
+  .container-right img {
+    width: 80%;
+    height: auto;
+  }
+  .container-right {
+    display: grid;
+    place-items: center;
+  }
+  .nav-logo {
+    min-height: 60px;
+    width: 160px;
+    padding: 0.5rem 0;
+  }
+}
+@media (max-width: 425px) {
+  .hero-sec {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 5rem 0;
+  }
+  html {
+    font-size: 6px;
+    line-height: 1.2;
+  }
+  .nav-logo {
+    min-height: 45px;
+    width: 120px;
+    padding: 0.5rem 0;
+  }
+  .port-grid {
+    gap: 4.5rem;
+  }
+  .top-contact {
+    flex-wrap: wrap;
+  }
+  .container-right img {
+    width: 70%;
+    height: auto;
+  }
 }
